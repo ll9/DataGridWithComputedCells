@@ -32,6 +32,14 @@ namespace DataGridWithComputedCells.Repositories
                 adapter.InsertCommand = builder.GetInsertCommand();
 
                 adapter.Fill(dataTable);
+
+                if (dataTable.PrimaryKey.Count() == 0)
+                {
+                    dataTable.Columns["Id"].AutoIncrement = true;
+                    dataTable.Columns["Id"].AutoIncrementSeed = 1;
+                    dataTable.Rows[0].SetField<int>("Id", 0);
+                    dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["Id"] };
+                }
             }
         }
 

@@ -17,5 +17,17 @@ namespace DataGridWithComputedCells
             InitializeComponent();
             var presenter = new Presenter.Presenter(this);
         }
+
+        public object DataSource
+        {
+            get
+            {
+                return dataGridView1.DataSource;
+            }
+            set
+            {
+                dataGridView1.DataSource = value;
+            }
+        }
     }
 }
