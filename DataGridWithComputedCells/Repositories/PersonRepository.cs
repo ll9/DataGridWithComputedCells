@@ -21,7 +21,7 @@ namespace DataGridWithComputedCells.Repositories
 
         public void Fill (DataTable dataTable)
         {
-            var query = $"SELECT *, MAX(ROWID) AS MAX_ROWID FROM {_tableName}";
+            var query = $"SELECT Id, Name, (Id+1) as Computed FROM {_tableName}";
 
             using (var connection = _context.GetConnection())
             using (var adapter = new SQLiteDataAdapter(query, connection))
@@ -37,7 +37,6 @@ namespace DataGridWithComputedCells.Repositories
                 {
                     dataTable.Columns["Id"].AutoIncrement = true;
                     dataTable.Columns["Id"].AutoIncrementSeed = 1;
-                    dataTable.Rows[0].SetField<int>("Id", 0);
                     dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["Id"] };
                 }
             }
@@ -45,7 +44,7 @@ namespace DataGridWithComputedCells.Repositories
 
         public void Update(DataTable dataTable)
         {
-            var query = $"SELECT *, MAX(ROWID) AS MAX_ROWID FROM {_tableName}";
+            var query = $"SELECT Id, Name, (Id+1) as Computed FROM {_tableName}";
 
             using (var connection = _context.GetConnection())
             using (var adapter = new SQLiteDataAdapter(query, connection))
