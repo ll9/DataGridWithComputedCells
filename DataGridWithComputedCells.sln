@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridWithComputedCells", "DataGridWithComputedCells\DataGridWithComputedCells.csproj", "{655F9424-7F3F-42AE-BBA7-B29620C37352}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDatabaseCreator", "CodeFirstDatabaseCreator\CodeFirstDatabaseCreator.csproj", "{C74DF65E-99EA-4EDE-8BEF-D2564BB678F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{655F9424-7F3F-42AE-BBA7-B29620C37352}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{655F9424-7F3F-42AE-BBA7-B29620C37352}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{655F9424-7F3F-42AE-BBA7-B29620C37352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74DF65E-99EA-4EDE-8BEF-D2564BB678F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74DF65E-99EA-4EDE-8BEF-D2564BB678F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74DF65E-99EA-4EDE-8BEF-D2564BB678F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74DF65E-99EA-4EDE-8BEF-D2564BB678F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
