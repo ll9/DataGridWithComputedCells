@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataGridWithComputedCells.Repositories
 {
-    class PersonRepository
+    class PersonRepository : IAdoRepository
     {
         private readonly DbContext _context;
         private readonly string _tableName = "Person";
