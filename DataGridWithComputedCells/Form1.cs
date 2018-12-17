@@ -15,6 +15,7 @@ namespace DataGridWithComputedCells
         public Form1()
         {
             InitializeComponent();
+            var presenter = new Presenter.Presenter(this);
         }
     }
 }
